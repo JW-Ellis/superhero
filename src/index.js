@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import "./index.css";
+import Carousel from "./Carousel";
 
 const SuperheroDropdown = () => {
   const [items, setItems] = React.useState([]);
@@ -37,7 +39,7 @@ const SuperheroDropdown = () => {
         {items
           .filter((item) => item.value === value)
           .map((filteredPerson) => (
-            <li>{filteredPerson.eye}</li>
+            <li key={value}>{filteredPerson.eye}</li>
           ))}
       </div>
     </div>
@@ -48,6 +50,7 @@ const App = () => {
   return (
     <div className="App">
       <SuperheroDropdown />
+      <Carousel />
     </div>
   );
 };
