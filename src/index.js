@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import Carousel from "./Components/Carousel";
+import HeroSlider from "./Components/HeroSlider";
 
 const SuperheroDropdown = () => {
   const [items, setItems] = React.useState([]);
@@ -47,17 +48,36 @@ const SuperheroDropdown = () => {
 };
 
 const images = [
-  "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80",
-  "https://images.unsplash.com/photo-1470341223622-1019832be824?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2288&q=80",
-  "https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2094&q=80",
-  "https://images.unsplash.com/photo-1534161308652-fdfcf10f62c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2174&q=80",
+  {
+    title: "Bruce Wayne",
+    description: "First appeared in 1953",
+    image:
+      "https://vignette.wikia.nocookie.net/marvel_dc/images/9/9d/Batman_003.jpg/revision/latest?cb=20090114064958",
+  },
+  {
+    title: "Azrael",
+    description: "First appeared in 1980",
+    image:
+      "https://i.pinimg.com/236x/77/73/73/7773732abb609502e17656c2e5dbfee7--batman-tattoo-dc-comic.jpg",
+  },
+  {
+    title: "Dick Grayson",
+    description: "First appeared in 1532",
+    image: "https://images-na.ssl-images-amazon.com/images/I/81gPs19EzjL.jpg",
+  },
+  {
+    title: "Jason Todd",
+    description: "First appeared in 1525",
+    image:
+      "https://cdn.mos.cms.futurecdn.net/F6fwMEGACa7gBvJfjKffrg-1200-80.jpg",
+  },
 ];
-
 const App = () => {
   return (
     <div className="App">
       {/* <SuperheroDropdown /> */}
-      <Carousel slides={images} />
+      {/* <Carousel slides={images} /> */}
+      <HeroSlider slides={images} />
     </div>
   );
 };
