@@ -1,3 +1,9 @@
+html {
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
 .slides {
   display: grid;
   justify-content: center;
@@ -8,6 +14,9 @@
   height: 400px;
   width: 100%;
   background: yellow;
+
+  perspective: 800px;
+  transform-style: preserve-3d;
 }
 
 .slides,
@@ -16,15 +25,33 @@
 }
 
 .slide {
+  display: grid;
+  align-content: center;
   width: 300px;
   height: 340px;
   outline: 1px solid green;
+  background-size: cover;
+  background-position: center center;
 
-  transform: translateX(calc(100% * var(--offset)));
+  transform: translateX(calc(100% * var(--offset)))
+    rotateY(calc(-25deg * var(--dir)));
+
+  transition: transform 0.5s ease-in-out;
+}
+
+.slideContent {
+  transform: translateZ(3rem);
+  opacity: 0;
+  transition: opacity 0.3s linear;
 }
 
 .slide[data-active] {
   outline-color: red;
+  transform: rotateX(calc(var(--x) * 45deg));
+}
+
+.slide[data-active] > .slideContent {
+  opacity: 1;
 }
 
 /* .slides h1,

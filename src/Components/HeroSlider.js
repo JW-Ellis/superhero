@@ -5,8 +5,20 @@ import "./HeroSlider.css";
 const Slide = ({ slide, offset }) => {
   const active = offset === 0 ? true : null;
   return (
-    <div className="slide" data-active={active} style={{ "--offset": offset }}>
-      {slide.title} {offset}
+    <div
+      className="slide"
+      data-active={active}
+      style={{
+        "--offset": offset,
+        "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1,
+        backgroundImage: `url('${slide.image}')`,
+      }}
+    >
+      <div className="slideContent">
+        <h2>{slide.title}</h2>
+        <h3>{slide.description}</h3>
+        {offset}
+      </div>
     </div>
   );
 };
@@ -33,10 +45,14 @@ const HeroSlider = ({ slides }) => {
     slideIndex: 0,
   };
   const [state, dispatch] = React.useReducer(slidesReducer, initialState);
+
   return (
     <div className="slides">
-      {slides.map((slide, i) => {
-        return <Slide slide={slide} offset={state.slideIndex - i} />;
+      {/* keeps index 0 slide front and center */}
+      {[...slides, ...slides, ...slides].map((slide, i) => {
+        let offset = slides.length + (state.slideIndex - i);
+
+        return <Slide slide={slide} offset={offset} />;
       })}
 
       <button onClick={() => dispatch({ type: "PREV" })}>Previous</button>
