@@ -16,7 +16,7 @@ html {
   background: yellow;
 
   perspective: 800px;
-  transform-style: preserve-3d;
+  /* transform-style: preserve-3d; */
 }
 
 .slides,
@@ -34,15 +34,49 @@ html {
   background-position: center center;
 
   transform: translateX(calc(100% * var(--offset)))
-    rotateY(calc(-25deg * var(--dir)));
+    rotateY(calc(25deg * var(--dir)));
 
   transition: transform 0.5s ease-in-out;
 }
 
 .slideContent {
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease-in-out;
+  opacity: 0.7;
   transform: translateZ(3rem);
   opacity: 0;
   transition: opacity 0.3s linear;
+}
+
+.slides > button {
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: white;
+  position: absolute;
+  font-size: 5rem;
+  width: 5rem;
+  height: 5rem;
+  top: 30%;
+  transition: opacity 0.3s;
+  opacity: 0.7;
+  z-index: 5;
+}
+
+.slides > button:hover {
+  opacity: 1;
+}
+
+.slides > button:focus {
+  outline: none;
+}
+
+.slides > button:first-child {
+  right: 36%;
+}
+
+.slides > button:last-child {
+  left: 36%;
 }
 
 .slide[data-active] {
