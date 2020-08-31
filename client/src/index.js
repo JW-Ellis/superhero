@@ -158,6 +158,22 @@ const images = [
       "https://terrigen-cdn-dev.marvel.com/content/prod/1x/hulkgreatpower2020001_cvr.jpg",
     hero: { name: "Spiderman", id: 2 },
   },
+  {
+    id: 9,
+    title: "Damian Wayne",
+    description: "First appeared in 2353",
+    image:
+      "https://comicvine1.cbsistatic.com/uploads/original/0/40/4629933-rbsobm_cv1_ds.jpg",
+    hero: { name: "Batman", id: 1 },
+  },
+  {
+    id: 10,
+    title: "Spiderman Noir",
+    description: "First appeared in 2343",
+    image:
+      "https://i.annihil.us/u/prod/marvel/i/mg/5/e0/5bc77a942112a/clean.jpg",
+    hero: { name: "Spiderman", id: 2 },
+  },
 ];
 const App = () => {
   return (
