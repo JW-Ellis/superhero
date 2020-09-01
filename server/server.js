@@ -18,7 +18,11 @@ app.use(bodyParser.json());
 
 database.on("error", console.error.bind(console, "MongoDB connection error:"));
 
+//database routes
 app.use(router);
 app.use("/api", router);
+
+//sets up image path
+app.use(express.static("public"));
 
 server.listen(PORT, () => console.log(`Server has started on port ${PORT}`));

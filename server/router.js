@@ -8,9 +8,9 @@ router.get("/", (req, res) => {
 });
 
 //CRUD routes from DB
-router.post("/movie", heroesController.createHero);
+router.post("/hero", heroesController.createHero);
 router.put("/hero/:id", heroesController.updateHero);
 router.delete("/hero/:id", heroesController.deleteHero);
-router.get("/movies", heroesController.getHeroes);
+router.get("/heroes", heroesController.getHeroes);
 
 module.exports = router;
