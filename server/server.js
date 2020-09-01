@@ -1,10 +1,24 @@
-const mongoose = require("mongoose");
-require("dotenv").config();
+const express = require("express");
+const http = require("http");
+const bodyParser = require("body-parser");
+const cors = require("cors");
 
-const mongoDB = require("mongodb://127.0.0.1/hero");
+//server setup
+const PORT = process.env.PORT || 5000;
 
-mongoose.connect(mongoDB, { useNewUrlParser: true });
+const router = require("./router");
+const database = require("./api");
 
-const database = mongoose.connection;
+const app = express();
+const server = http.createServer(app);
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
+app.use(bodyParser.json());
 
 database.on("error", console.error.bind(console, "MongoDB connection error:"));
+
+app.use(router);
+app.use("/api", router);
+
+server.listen(PORT, () => console.log(`Server has started on port ${PORT}`));
