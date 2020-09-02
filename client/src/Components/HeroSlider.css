@@ -1,7 +1,7 @@
 html {
   background: #000;
   color: #fff;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .slides {
@@ -9,14 +9,10 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: relative;
-  top: 34%;
-  height: 400px;
+  height: 480px;
   width: 100%;
-  background: yellow;
 
   perspective: 800px;
-  /* transform-style: preserve-3d; */
 }
 
 .slides,
@@ -28,8 +24,7 @@ html {
   display: grid;
   align-content: center;
   width: 300px;
-  height: 340px;
-  outline: 1px solid green;
+  height: 450px;
   background-size: cover;
   background-position: center center;
 
@@ -40,10 +35,16 @@ html {
 }
 
 .slideContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 300px;
   background-repeat: no-repeat;
   transition: transform 0.5s ease-in-out;
   opacity: 0.7;
-  transform: translateZ(3rem);
+  /* transform: translateZ(3rem); */
   opacity: 0;
   transition: opacity 0.3s linear;
 }
@@ -80,7 +81,6 @@ html {
 }
 
 .slide[data-active] {
-  outline-color: red;
   transform: rotateX(calc(var(--x) * 45deg));
 }
 

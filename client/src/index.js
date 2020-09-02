@@ -60,35 +60,25 @@ const SuperheroDropdown = () => {
 
   return (
     <div>
-      {/* dropdown that sets value  */}
-      <select value={value} onChange={(e) => setValue(e.currentTarget.value)}>
-        {[...heroOptions].map(([heroID, hero]) => (
-          <option id={heroID} value={hero}>
-            {hero}
-          </option>
-        ))}
-
-        {/*  {items.map(({ label, value }) => (
-          <option key={value} value={value}>
-            {label}
-          </option>
-        ))} */}
-      </select>
-      <div>
-        {/* filters based on value */}
-        <ul>
-          {filteredHeroes().map((item) => (
-            <li>{item.name}</li>
-          ))}
-
-          {/*  {items
-            .filter((item) => item.value === value)
-            .map((filteredPerson) => (
-              <li key={value}>{filteredPerson.name}</li>
-            ))} */}
-        </ul>
+      <div className="header">
+        <h1>CAPENDIUM</h1>
+        <h2>A gallery of sidekicks and alternate universe characters</h2>
       </div>
-      <HeroSlider slides={filteredHeroes().map((item) => item)} />
+      <div className="select">
+        <p>Select a hero:</p>
+        {/* dropdown that sets value  */}
+        <select value={value} onChange={(e) => setValue(e.currentTarget.value)}>
+          {[...heroOptions].map(([heroID, hero]) => (
+            <option id={heroID} value={hero}>
+              {hero}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div className="slider">
+        <div className="stripe"></div>
+        <HeroSlider slides={filteredHeroes().map((item) => item)} />
+      </div>
     </div>
   );
 };
