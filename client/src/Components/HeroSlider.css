@@ -44,9 +44,17 @@ html {
   background-repeat: no-repeat;
   transition: transform 0.5s ease-in-out;
   opacity: 0.7;
-  /* transform: translateZ(3rem); */
   opacity: 0;
   transition: opacity 0.3s linear;
+}
+
+.slideContent > h2 {
+  margin-top: 2.5rem;
+}
+
+.slideContent > p {
+  margin: 0rem 0 3rem;
+  text-align: center;
 }
 
 .slides > button {

@@ -19,7 +19,17 @@ body,
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 0.2rem;
+}
+
+h2 {
+  font-family: LemonBold;
+  text-transform: uppercase;
+}
+
+p,
+h3 {
+  font-family: Lemon;
 }
 
 .select {
@@ -42,6 +52,46 @@ body,
   height: 300px;
   background: #faf015;
   top: 15%;
+}
+
+h1 {
+  font-family: Watchmen;
+  color: #faf015;
+  margin: 3rem auto 1rem;
+  letter-spacing: 0.05rem;
+  font-size: 3.6rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@font-face {
+  font-family: "Watchmen";
+  src: local("Watchmen"),
+    url(./fonts/Watchmen/--wATCHMEn--.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lemon";
+  src: local("Lemon"),
+    url(./fonts/Lemon/LemonMilkRegular-X3XE2.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "LemonBold";
+  src: local("LemonBold"),
+    url(./fonts/Lemon/LemonMilkBold-gx2B3.otf) format("opentype");
 }
 
 /* .App-header {

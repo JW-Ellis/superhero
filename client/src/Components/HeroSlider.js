@@ -16,7 +16,7 @@ const Slide = ({ slide, offset }) => {
     >
       <div className="slideContent">
         <h2>{slide.name}</h2>
-        <h3>{slide.description}</h3>
+        <p>{slide.description}</p>
       </div>
     </div>
   );

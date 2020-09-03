@@ -64,8 +64,9 @@ const SuperheroDropdown = () => {
         <h1>CAPENDIUM</h1>
         <h2>A gallery of sidekicks and alternate universe characters</h2>
       </div>
+
       <div className="select">
-        <p>Select a hero:</p>
+        <p>Select a hero</p>
         {/* dropdown that sets value  */}
         <select value={value} onChange={(e) => setValue(e.currentTarget.value)}>
           {[...heroOptions].map(([heroID, hero]) => (
@@ -87,7 +88,8 @@ const images = [
   {
     id: 1,
     title: "Bruce Wayne",
-    description: "First appeared in 1953",
+    description:
+      "Sidekick: First appeared in Detective Comics #168 - February 1951",
     image:
       "https://vignette.wikia.nocookie.net/marvel_dc/images/9/9d/Batman_003.jpg/revision/latest?cb=20090114064958",
     hero: { name: "Batman", id: 1 },
