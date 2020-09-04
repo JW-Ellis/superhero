@@ -68,13 +68,18 @@ const SuperheroDropdown = () => {
       <div className="select">
         <p>Select a hero</p>
         {/* dropdown that sets value  */}
-        <select value={value} onChange={(e) => setValue(e.currentTarget.value)}>
-          {[...heroOptions].map(([heroID, hero]) => (
-            <option id={heroID} value={hero}>
-              {hero}
-            </option>
-          ))}
-        </select>
+        <div className="selector">
+          <select
+            value={value}
+            onChange={(e) => setValue(e.currentTarget.value)}
+          >
+            {[...heroOptions].map(([heroID, hero]) => (
+              <option id={heroID} value={hero}>
+                {hero}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
       <div className="slider">
         <div className="stripe"></div>
@@ -112,7 +117,8 @@ const images = [
   {
     id: 4,
     title: "Jason Todd",
-    description: "First appeared in 1525",
+    description:
+      "Sidekick: First appeared in Detective Comics #168 - February 1951",
     image:
       "https://cdn.mos.cms.futurecdn.net/F6fwMEGACa7gBvJfjKffrg-1200-80.jpg",
     hero: { name: "Batman", id: 1 },

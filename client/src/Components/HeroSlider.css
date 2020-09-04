@@ -49,11 +49,11 @@ html {
 }
 
 .slideContent > h2 {
-  margin-top: 2.5rem;
+  margin-top: 0.6rem;
 }
 
 .slideContent > p {
-  margin: 0rem 0 3rem;
+  margin: 0rem 0 0rem;
   text-align: center;
 }
 
