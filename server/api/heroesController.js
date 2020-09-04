@@ -83,9 +83,9 @@ getHeroes = async (req, res) => {
       return res.status(400).json({ success: false, error: err });
     }
     if (!heroes.length) {
-      return res.status(404).json({ success: true, data: movies });
+      return res.status(404).json({ success: true, data: heroes });
     }
-    return res.status(200).json({ success: true, data: movies });
+    return res.status(200).json({ success: true, data: heroes });
   }).catch((err) => console.log(err));
 };
 

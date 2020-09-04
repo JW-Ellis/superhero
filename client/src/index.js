@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Carousel from "./Components/Carousel";
+
 import HeroSlider from "./Components/HeroSlider";
 
 const SuperheroDropdown = () => {
