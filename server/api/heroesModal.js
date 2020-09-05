@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+//Schema setup
 const Hero = new Schema({
   id: Number,
   title: String,
