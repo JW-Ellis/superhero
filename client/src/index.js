@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-
 import HeroSlider from "./Components/HeroSlider";
 
 const SuperheroDropdown = () => {
@@ -171,6 +170,21 @@ const images = [
     image:
       "https://i.annihil.us/u/prod/marvel/i/mg/5/e0/5bc77a942112a/clean.jpg",
     hero: { name: "Spiderman", id: 2 },
+  },
+  {
+    id: 11,
+    title: "The Shrek",
+    description: "Eats ass in the end of the second movie",
+    image: "https://d1466nnw0ex81e.cloudfront.net/n_iv/600/1033261.jpg",
+    hero: { name: "Batman", id: 1 },
+  },
+  {
+    id: 12,
+    title: "SANIC",
+    description: "Eats ass in the end of the second movie",
+    image:
+      "https://www.idwpublishing.com/wp-content/uploads/2018/01/STH02_cvrA.jpg",
+    hero: { name: "Batman", id: 1 },
   },
 ];
 const App = () => {
