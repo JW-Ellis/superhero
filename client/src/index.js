@@ -45,8 +45,6 @@ const SuperheroDropdown = () => {
     return items.filter((item) => String(item.value) === value);
   };
 
-  console.log(items);
-
   return (
     <div>
       <div className="header">
