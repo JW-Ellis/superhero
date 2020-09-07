@@ -33,6 +33,7 @@ const SuperheroDropdown = () => {
     getHeroes();
   }, []);
 
+  //creates dropdown of unique heroes and filters out duplicates
   const heroOptions = new Map([
     ...items.map((item) => [item.heroID, item.hero]),
   ]);
@@ -71,7 +72,7 @@ const SuperheroDropdown = () => {
       </div>
       <div className="slider">
         <div className="stripe"></div>
-        {/* <HeroSlider slides={filteredHeroes().map((item) => item)} /> */}
+        {/* Displays loading component if fetching or slides when data is fetched */}
         {loading ? (
           <Loading />
         ) : (
