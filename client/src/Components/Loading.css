@@ -1,0 +1,26 @@
+.loading {
+  position: relative;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 6.6rem;
+}
+
+.loading > h1 {
+  color: black;
+  font-size: 3.3rem;
+  text-align: center;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .loading > h1 {
+    font-size: 2.6rem;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1200px) {
+  .loading > h1 {
+    font-size: 2.6rem;
+  }
+}

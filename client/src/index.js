@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import Loading from "./Components/Loading";
 import HeroSlider from "./Components/HeroSlider";
 
 const SuperheroDropdown = () => {
   const [items, setItems] = React.useState([]);
   const [value, setValue] = useState("Batman");
+  //displays loading component when fetching heroes from database
+  const [loading, setLoading] = useState(true);
   //pulls json data
   React.useEffect(() => {
     async function getHeroes() {
@@ -25,6 +28,7 @@ const SuperheroDropdown = () => {
           heroID: hero.id,
         }))
       );
+      setLoading(false);
     }
     getHeroes();
   }, []);
@@ -67,7 +71,12 @@ const SuperheroDropdown = () => {
       </div>
       <div className="slider">
         <div className="stripe"></div>
-        <HeroSlider slides={filteredHeroes().map((item) => item)} />
+        {/* <HeroSlider slides={filteredHeroes().map((item) => item)} /> */}
+        {loading ? (
+          <Loading />
+        ) : (
+          <HeroSlider slides={filteredHeroes().map((item) => item)} />
+        )}
       </div>
     </div>
   );
