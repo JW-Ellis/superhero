@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 .App {
   height: inherit;
   width: inherit;
