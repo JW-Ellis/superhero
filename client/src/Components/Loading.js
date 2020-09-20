@@ -5,7 +5,7 @@ import "./Loading.css";
 const Loading = () => {
   return (
     <div className="loading">
-      <h1>SUMMONING HEROES...</h1>
+      <h1>STANDBY: SUMMONING HEROES...</h1>
     </div>
   );
 };
